@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIR DELAY</title>
+</head>
+    <body bgcolor=#7FFF00>
+    
+        <h2> AIR DELAY MODEL </h2>
+
+            <form action="/predict" method="POST">
+                <label>DepTime : </label> <input type="number" step= "any" name="html_dt"> <br><br>
+                <label> CRSDepTime : </label> <input type="number" step= "any" name ="html_cdt"><br><br>
+                <label> ArrTime : </label> <input type="number" step= "any" name ="html_at"><br><br>
+                <label> CRSArrTime : </label> <input type="number" step= "any"t name ="html_cat"><br><br>
+                <label> FlightNum : </label> <input type="number" step= "any" name ="html_flightno"><br><br>
+                <label> AirTime : </label> <input type="number" step= "any" name ="html_airtime"><br><br>
+                <label> ArrDelay : </label> <input type="number" step= "any" name ="html_arrd"><br><br>
+                <label> Origin : </label> <select name ="html_org">
+                    <option value = "Origin-ABE">Origin-ABE</option>
+                    <option value = "Origin-ABQ">Origin-ABQ</option>
+                    <option value = "Origin-ACV">Origin-ACV</option>
+                    <option value = "Origin-AEX">Origin-AEX</option>
+                    <option value = "Origin-ALB">Origin-ALB</option>
+                    <option value = "Origin-AMA">Origin-AMA</option>
+                    <option value = "Origin-ANC">Origin-ANC</option>
+                    <option value = "Origin-ASE">Origin-ASE</option>
+                    <option value = "Origin-ATL">Origin-ATL</option>
+                    <option value = "Origin-ATW">Origin-ATW</option>
+                    <option value = "Origin-AUS">Origin-AUS</option>
+                    <option value = "Origin-AVL">Origin-AVL</option>
+                    <option value = "Origin-AVP">Origin-AVP</option>
+                    <option value = "Origin-AZO">Origin-AZO</option>
+                    <option value = "Origin-BDL">Origin-BDL</option>
+                    <option value = "Origin-BFL">Origin-BFL</option>
+                    <option value = "Origin-BGR">Origin-BGR</option>
+                    <option value = "Origin-BHM">Origin-BHM</option>
+                    <option value = "Origin-BIL">Origin-BIL</option>
+                    <option value = "Origin-BIS">Origin-BIS</option>
+                    <option value = "Origin-BLI">Origin-BLI</option>
+                    <option value = "Origin-BMI">Origin-BMI</option>
+                    <option value = "Origin-BNA">Origin-BNA</option>
+                    <option value = "Origin-BOI">Origin-BOI</option>
+                    <option value = "Origin-BOS">Origin-BOS</option>
+                    <option value = "Origin-BRO">Origin-BRO</option>
+                    <option value = "Origin-BTM">Origin-BTM</option>
+                    <option value = "Origin-BTR">Origin-BTR</option>
+                    <option value = "Origin-BTV">Origin-BTV</option>
+                    <option value = "Origin-BUF">Origin-BUF</option>
+                    <option value = "Origin-BUR">Origin-BUR</option>
+                    <option value = "Origin-BWI">Origin-BWI</option>
+                    <option value = "Origin-BZN">Origin-BZN</option>
+                    <option value = "Origin-CAE">Origin-CAE</option>
+                    <option value = "Origin-CAK">Origin-CAK</option>
+                    <option value = "Origin-CDC">Origin-CDC</option>
+                    <option value = "Origin-CEC">Origin-CEC</option>
+                    <option value = "Origin-CHA">Origin-CHA</option>
+                    <option value = "Origin-CHS">Origin-CHS</option>
+                    <option value = "Origin-CIC">Origin-CIC</option>
+                    <option value = "Origin-CID">Origin-CID</option>
+                    <option value = "Origin-CLD">Origin-CLD</option>
+                    <option value = "Origin-CLE">Origin-CLE</option>
+                    <option value = "Origin-CLL">Origin-CLL</option>
+                    <option value = "Origin-CLT">Origin-CLT</option>
+                    <option value = "Origin-LAX">Origin-LAX</option>
+                    </select>
+                    <br><br>
+
+                    <label> Dest : </label> <select name ="html_dest">
+                        <option value = "Dest-ABE">Dest-ABE</option>
+                        <option value = "Dest-ABQ">Dest-ABQ</option>
+                        <option value = "Dest-ACV">Dest-ACV</option>
+                        <option value = "Destn-AEX">Dest-AEX</option>
+                        <option value = "Dest-ALB">Dest-ALB</option>
+                        <option value = "Dest-AMA">Dest-AMA</option>
+                        <option value = "Dest-ANC">Dest-ANC</option>
+                        <option value = "Dest-ASE">Dest-ASE</option>
+                        <option value = "Dest-ATL">Dest-ATL</option>
+                        <option value = "Dest-ATW">Dest-ATW</option>
+                        <option value = "Dest-AUS">Dest-AUS</option>
+                        <option value = "Dest-AVL">Dest-AVL</option>  
+                        <option value = "Dest-AVP">Dest-AVP</option>
+                        <option value = "Dest-AZO">Dest-AZO</option>
+                        <option value = "Dest-BDL">Dest-BDL</option>
+                        <option value = "Dest-BFL">Dest-BFL</option>
+                        <option value = "Dest-BGR">Dest-BGR</option>
+                        <option value = "Dest-BHM">Dest-BHM</option>
+                        <option value = "Dest-BIL">Dest-BIL</option>
+                        <option value = "Dest-BIS">Dest-BIS</option>
+                        <option value = "Dest-BLI">Dest-BLI</option>
+                        <option value = "Dest-BMI">Dest-BMI</option>
+                        <option value = "Dest-BNA">Dest-BNA</option>
+                        <option value = "Dest-BOI">Dest-BOI</option>
+                        <option value = "Dest-BOS">Dest-BOS</option>
+                        <option value = "Dest-BRO">Dest-BRO</option>
+                        <option value = "Dest-BTM">Dest-BTM</option>
+                        <option value = "Dest-BTR">Dest-BTR</option>
+                        <option value = "Dest-BTV">Dest-BTV</option>
+                        <option value = "Dest-BUF">Dest-BUF</option>
+                        <option value = "Dest-BUR">Dest-BUR</option>
+                        <option value = "Dest-BWI">Dest-BWI</option>
+                        <option value = "Dest-BZN">Dest-BZN</option>
+                        <option value = "Dest-CAE">Dest-CAE</option>
+                        <option value = "Dest-CAK">Dest-CAK</option>
+                        <option value = "Dest-CDC">Dest-CDC</option>
+                        <option value = "Dest-CEC">Dest-CEC</option>
+                        <option value = "Dest-CHA">Dest-CHA</option>
+                        <option value = "Dest-CHS">Dest-CHS</option>
+                        <option value = "Dest-CIC">Dest-CIC</option>
+                        <option value = "Dest-CID">Dest-CID</option>
+                        <option value = "Dest-CLD">Dest-CLD</option>
+                        <option value = "Dest-CLE">Dest-CLE</option>
+                        <option value = "Dest-CLL">Dest-CLL</option>
+                        <option value = "Dest-CLT">Dest-CLT</option>
+                        <option value = "Dest-EUG">Dest-EUG</option>
+                        <option value = "Dest-DEN">Dest-DEN</option>
+                        </select>
+                        <br><br>
+                        <label> Distance : </label> <input type="number" step= "any" name ="html_dist"><br><br>
+                        <label> CarrierDelay : </label> <input type="number" step= "any" name ="html_cd"><br><br>
+                        <label> LateAircraftDelay : </label> <input type="number" step= "any" name ="html_lad"><br><br>
+                        <input type = "Submit" value = "Check_Delay">
+                        <h3>{{PREDICT_DELAY}}</h3>
+        </form>
+                    
+    </body>
+</html>
