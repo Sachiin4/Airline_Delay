@@ -61,7 +61,7 @@ class predictions():
         print(f"Predicted depature delay = {dep_delay}")
         print(f"Actual depature delay = 16")
 
-        return render_template("air.html",PREDICT_DELAY=np.around(dep_delay,3))
+        return render_template("air.html",PREDICT_DELAY=dep_delay)
 
 if __name__ == "__main__":
      
