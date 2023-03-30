@@ -58,10 +58,11 @@ class predictions():
         print(len(user_input))
 
         dep_delay = self.model.predict([user_input])
+        dep_delay = int(np.around(dep_delay,0)[0])
         print(f"Predicted depature delay = {dep_delay}")
-        print(f"Actual depature delay = 16")
+      
 
-        return render_template("air.html",PREDICT_DELAY=dep_delay)
+        return dep_delay
 
 if __name__ == "__main__":
      

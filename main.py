@@ -14,7 +14,7 @@ def predict_dep_delay():
     predicted_delay=pred_obj.predict_dep_del(data)
     print(predicted_delay)
 
-    return (predicted_delay)
+    return render_template("air.html",PREDICT_DELAY=predicted_delay)
 
 
 if __name__ == "__main__":
